@@ -1,6 +1,7 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
+import { setPostSignalSetFn } from '@angular/core/primitives/signals';
 
 @Component({
   selector: 'app-root',
