@@ -1,4 +1,11 @@
 export interface User {
-  username: string;
+  userName: string;
   token: string;
+}
+
+export interface Users {
+  id: number;
+  passwordHash: string;
+  passwordSalt: string;
+  username: string;
 }

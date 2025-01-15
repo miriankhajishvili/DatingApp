@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RegisterComponent } from '../register/register.component';
 import { HttpClient } from '@angular/common/http';
+import { Users } from '../_models/user.interface';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +12,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
   http = inject(HttpClient);
-
   registerMode = false;
-  users: any;
+  users: Users[] = [];
 
   ngOnInit(): void {
     this.getUsers();
@@ -25,7 +25,9 @@ export class HomeComponent implements OnInit {
 
   getUsers() {
     this.http
-      .get('https://localhost:5001/api/users')
-      .subscribe((res) => (this.users = res));
+      .get<Users[]>('https://localhost:5001/api/users')
+      .subscribe((res) => {
+        this.users = res;
+      });
   }
 }

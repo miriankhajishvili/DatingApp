@@ -1,13 +1,13 @@
 import { AccountService } from './_services/account.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { NavComponent } from './nav/nav.component';
-import { HomeComponent } from './home/home.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HttpClientModule, NavComponent, HomeComponent],
+  imports: [HttpClientModule, NavComponent, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
