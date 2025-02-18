@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "ng-gallery": "^12.0.0",
     "ngx-toastr": "^19.0.0"
   }
 }

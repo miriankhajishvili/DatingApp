@@ -7,7 +7,6 @@ import { catchError } from 'rxjs';
 export const errorInterceptor: HttpInterceptorFn = (req, next) => {
   const router = inject(Router);
   const toast = inject(ToastrService);
-  console.log('errorInterceptor', req);
 
   return next(req).pipe(
     catchError((error) => {
