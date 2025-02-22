@@ -14,6 +14,7 @@ public static class IdentityServiceExtensions
          options =>
          {
              var tokenKey = config["TokenKey"] ?? throw new Exception("Cannot access tokenKey from appsettings");
+             System.Console.WriteLine(tokenKey);
              options.TokenValidationParameters = new TokenValidationParameters
              {
                  ValidateIssuerSigningKey = true,
