@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace API.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -26,8 +26,8 @@ namespace API.Migrations
                     LastActive = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Gender = table.Column<string>(type: "TEXT", nullable: false),
                     Introduction = table.Column<string>(type: "TEXT", nullable: true),
-                    interests = table.Column<string>(type: "TEXT", nullable: true),
-                    lokiingFor = table.Column<string>(type: "TEXT", nullable: true),
+                    Interests = table.Column<string>(type: "TEXT", nullable: true),
+                    LookingFor = table.Column<string>(type: "TEXT", nullable: true),
                     City = table.Column<string>(type: "TEXT", nullable: false),
                     Country = table.Column<string>(type: "TEXT", nullable: false)
                 },
